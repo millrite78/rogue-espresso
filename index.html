@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+  SHAUN: EDIT "FIND US THIS WEEK" HERE. One line per stop:
+  ["Day", "Time", "Place", "Address or note"]
+  Leave the list empty [] to show "Schedule coming soon".
+====================================================================== -->
+<script>
+const SCHEDULE = [
+  ["Saturday", "9 AM – 1 PM", "Location TBD", "Placeholder – update me"],
+  ["Sunday",   "9 AM – 12 PM", "Location TBD", "Placeholder – update me"],
+];
+</script>
+<!-- ================= END OF EDIT BLOCK ================= -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rogue Espresso | Fuquay-Varina, NC</title>
+<meta name="description" content="Rogue Espresso: wooden espresso push cart in Fuquay-Varina, NC. Good Coffee Travels Fast.">
+<style>
+:root{--navy:#1b2a5c;--ink:#14204a;--cream:#fbf8f1;--line:#c9cfe0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.4}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.1rem}
+.frame{border:3px double var(--navy);border-radius:6px;margin:.8rem;background:#fff}
+header{text-align:center;padding:2.2rem 0 1.6rem;color:var(--navy)}
+.mark{position:relative;display:inline-block}
+.wave{position:absolute;width:5.5rem;right:-1.2rem;top:-1.6rem}
+.script{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-size:5rem;font-style:italic;line-height:1}
+.caps{display:flex;align-items:center;gap:.8rem;justify-content:center;letter-spacing:.35em;font-weight:600;font-size:1.4rem;margin:.6rem 0 .3rem}
+.caps:before,.caps:after{content:"";width:2.2rem;height:2px;background:var(--navy)}
+.tag{display:flex;align-items:center;gap:.6rem;justify-content:center;font-weight:700;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase}
+.tag:before,.tag:after{content:"";width:2rem;height:1px;background:var(--navy)}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.4rem}
+.btn{padding:.75rem 1.3rem;border-radius:999px;font-weight:600;text-decoration:none;background:var(--navy);color:#fff}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+section{padding:1.6rem 0}
+.bar{background:var(--navy);color:#fff;text-align:center;letter-spacing:.15em;text-transform:uppercase;font-size:.85rem;padding:.4rem;border-radius:4px;margin-bottom:.8rem}
+.card{border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:6px;padding:.8rem 1rem;margin-bottom:.6rem}
+.card b{display:block} .muted{color:#56608a;font-size:.9rem}
+.row{display:grid;grid-template-columns:1fr 3.6rem 3.6rem;gap:.3rem;padding:.45rem 0;border-bottom:1px dotted var(--line);align-items:start}
+.row b,.row2 b{text-transform:uppercase;font-size:.95rem}
+.row small{display:block;color:#56608a;font-size:.78rem}
+.row span{text-align:right;font-variant-numeric:tabular-nums}
+.row.h span{font-weight:700;font-size:.75rem}
+.row2{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px dotted var(--line)}
+.addons{border:2px solid var(--navy);border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+.addons h3{font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-weight:400;font-size:2rem;text-align:center;color:var(--navy)}
+.cols{display:grid;gap:1.4rem}
+.cater{text-align:center;border-top:1px solid var(--line)}
+.fuel{font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-size:1.8rem;text-align:center;color:var(--navy)}
+footer{text-align:center;padding:1rem 0 1.6rem;color:var(--navy);font-size:.85rem}
+footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin-bottom:.5rem}
+@media(min-width:760px){.cols{grid-template-columns:1.25fr 1fr}.script{font-size:6.5rem}}
+</style>
+</head>
+<body><div class="frame">
+<header><div class="wrap">
+ <div class="mark"><svg class="wave" viewBox="0 0 120 40" aria-hidden="true"><path d="M2 36 C30 34 40 6 70 4 C92 3 104 14 100 24 C96 32 82 30 84 20 C86 12 98 12 102 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 36 C40 30 50 14 66 12 M40 36 C52 30 58 22 70 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><div class="script">Rogue</div></div>
+ <div class="caps">ESPRESSO</div>
+ <div class="tag">Good Coffee Travels Fast</div>
+ <p style="margin-top:.8rem;font-size:.9rem">Wooden espresso push cart · Fuquay-Varina, NC</p>
+ <div class="btns"><a class="btn" href="#find">Find us this week</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
+</div></header>
+
+<section id="find"><div class="wrap"><div class="bar">Find us this week</div><div id="schedule"></div></div></section>
+
+<section id="menu"><div class="wrap cols">
+ <div><div class="bar">Classics and more</div><div class="row h"><div></div><span>12oz</span><span>16oz</span></div><div class="row"><div><b>Brewed Coffee</b><small>freshly brewed drip coffee</small></div><span>$3.00</span><span>$3.50</span></div><div class="row"><div><b>Latte</b></div><span>$5.00</span><span>$6.00</span></div><div class="row"><div><b>Cappuccino</b><small>espresso • steamed milk foam</small></div><span>$5.00</span><span>$6.00</span></div><div class="row"><div><b>Americano</b><small>espresso • hot water</small></div><span>$4.00</span><span>$5.00</span></div><div class="row"><div><b>Caramel Macchiato</b><small>vanilla • caramel • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>White Chocolate Mocha</b><small>white chocolate • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Mocha</b><small>chocolate • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Dirty Chai</b><small>chai • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Macchiato</b><small>espresso • a touch of steamed milk</small></div><span>$4.50</span><span>$5.50</span></div><div class="row"><div><b>Iced Coffee</b><small>Syrup flavors: Vanilla • Caramel • Hazelnut • White Chocolate • Mocha • Brown Sugar Cinnamon • Toffee • Irish Cream • Coconut</small></div><span>$4.00</span><span>$5.00</span></div></div>
+ <div><div class="bar">Other drinks</div><div class="row h"><div></div><span>12oz</span><span>16oz</span></div><div class="row"><div><b>Hot Chocolate</b></div><span>$4.00</span><span>$5.00</span></div><div class="row"><div><b>Chai Latte</b></div><span>$5.00</span><span>$6.00</span></div>
+  <div class="addons"><h3>Add Ons</h3><div class="row2"><b>Extra Shot (Espresso)</b><span>$1.00</span></div><div class="row2"><b>Extra Flavor Shot</b><span>$0.75</span></div><div class="row2"><b>Oat Milk</b><span>$0.75</span></div><div class="row2"><b>Honey</b><span>$0.75</span></div></div>
+  <div class="bar">Drinks</div><div class="row2"><b>Bottled Water</b><span>$2.00</span></div>
+ </div>
+</div></section>
+
+<section class="cater"><div class="wrap">
+ <div class="bar">Catering &amp; Events</div>
+ <p>Want the cart at your office, party, or event? Send the date, location, and headcount.</p>
+ <div class="btns"><a class="btn" href="mailto:tracylk23@hotmail.com,millrite1shaun@yahoo.com?subject=Rogue%20Espresso%20Catering%20%2F%20Event%20Request&body=Date%3A%0ALocation%3A%0AHeadcount%3A%0ATime%20window%3A%0ANotes%3A">Request catering</a><a class="btn alt" href="tel:+18184780336">Tap to call Tracy</a></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="bar">Contact</div>
+ <div class="card"><b>Tracy Kangas</b>Owner<div class="muted"><a href="mailto:tracylk23@hotmail.com">tracylk23@hotmail.com</a> · <a href="tel:+18184780336">(818) 478-0336</a></div></div>
+ <div class="card"><b>Shaun Rappleye</b><div class="muted"><a href="mailto:millrite1shaun@yahoo.com">millrite1shaun@yahoo.com</a> · <a href="tel:+19077508212">(907) 750-8212</a></div></div>
+</div></section>
+
+<p class="fuel">fueling your next adventure</p>
+<footer><div class="wrap">
+ <p class="thx">Thank you for supporting local business &hearts;</p>
+ <p>Tracy Kangas, Owner · <a href="tel:+18184780336">(818) 478-0336</a> · <a href="mailto:tracylk23@hotmail.com">tracylk23@hotmail.com</a></p>
+ <p>Shaun Rappleye · <a href="tel:+19077508212">(907) 750-8212</a> · <a href="mailto:millrite1shaun@yahoo.com">millrite1shaun@yahoo.com</a></p>
+ <p>&copy; <span id="yr"></span> Rogue Espresso</p>
+</div></footer>
+</div>
+<script>
+const el=document.getElementById("schedule");
+el.innerHTML = SCHEDULE.length ? SCHEDULE.map(([d,t,p,n])=>`<div class="card"><b>${d} · ${t}</b>${p}<div class="muted">${n}</div></div>`).join("")
+ : '<p class="muted">Schedule coming soon. Call or email to find the cart.</p>';
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
