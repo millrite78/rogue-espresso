@@ -5,10 +5,7 @@
   Leave the list empty [] to show "Schedule coming soon".
 ====================================================================== -->
 <script>
-const SCHEDULE = [
-  ["Saturday", "9 AM – 1 PM", "Location TBD", "Placeholder – update me"],
-  ["Sunday",   "9 AM – 12 PM", "Location TBD", "Placeholder – update me"],
-];
+const SCHEDULE = [];
 </script>
 <!-- ================= END OF EDIT BLOCK ================= -->
 <html lang="en">
@@ -51,6 +48,8 @@ section{padding:1.6rem 0}
 .cater{text-align:center;border-top:1px solid var(--line)}
 .fuel{font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-size:1.8rem;text-align:center;color:var(--navy)}
 footer{text-align:center;padding:1rem 0 1.6rem;color:var(--navy);font-size:.85rem}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}.gal figure{margin:0}.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;display:block}.gal figcaption{font-size:.75rem;color:#56608a;text-align:center;padding:.2rem}video{width:100%;max-width:360px;display:block;margin:0 auto;border-radius:8px;background:#000}.punch{text-align:center;font-weight:700;border:2px dashed var(--navy);border-radius:8px;padding:.7rem;margin:1rem 0}ul.terms{list-style:none;max-width:520px;margin:.6rem auto}ul.terms li{padding:.35rem 0;border-bottom:1px dotted var(--line)}ul.terms li:before{content:"\2615  "}
+@media(min-width:760px){.gal{grid-template-columns:repeat(4,1fr)}}
 footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin-bottom:.5rem}
 @media(min-width:760px){.cols{grid-template-columns:1.25fr 1fr}.script{font-size:6.5rem}}
 </style>
@@ -61,22 +60,35 @@ footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin
  <div class="caps">ESPRESSO</div>
  <div class="tag">Good Coffee Travels Fast</div>
  <p style="margin-top:.8rem;font-size:.9rem">Wooden espresso push cart · Fuquay-Varina, NC</p>
- <div class="btns"><a class="btn" href="#find">Find us this week</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
+ <div class="btns"><a class="btn" href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Coming soon: follow us for locations</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
 </div></header>
 
-<section id="find"><div class="wrap"><div class="bar">Find us this week</div><div id="schedule"></div></div></section>
+<section id="find"><div class="wrap"><div class="bar">Coming soon: follow us for locations</div><div id="schedule"></div></div></section>
 
 <section id="menu"><div class="wrap cols">
  <div><div class="bar">Classics and more</div><div class="row h"><div></div><span>12oz</span><span>16oz</span></div><div class="row"><div><b>Brewed Coffee</b><small>freshly brewed drip coffee</small></div><span>$3.00</span><span>$3.50</span></div><div class="row"><div><b>Latte</b></div><span>$5.00</span><span>$6.00</span></div><div class="row"><div><b>Cappuccino</b><small>espresso • steamed milk foam</small></div><span>$5.00</span><span>$6.00</span></div><div class="row"><div><b>Americano</b><small>espresso • hot water</small></div><span>$4.00</span><span>$5.00</span></div><div class="row"><div><b>Caramel Macchiato</b><small>vanilla • caramel • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>White Chocolate Mocha</b><small>white chocolate • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Mocha</b><small>chocolate • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Dirty Chai</b><small>chai • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Macchiato</b><small>espresso • a touch of steamed milk</small></div><span>$4.50</span><span>$5.50</span></div><div class="row"><div><b>Iced Coffee</b><small>Syrup flavors: Vanilla • Caramel • Hazelnut • White Chocolate • Mocha • Brown Sugar Cinnamon • Toffee • Irish Cream • Coconut</small></div><span>$4.00</span><span>$5.00</span></div></div>
  <div><div class="bar">Other drinks</div><div class="row h"><div></div><span>12oz</span><span>16oz</span></div><div class="row"><div><b>Hot Chocolate</b></div><span>$4.00</span><span>$5.00</span></div><div class="row"><div><b>Chai Latte</b></div><span>$5.00</span><span>$6.00</span></div>
   <div class="addons"><h3>Add Ons</h3><div class="row2"><b>Extra Shot (Espresso)</b><span>$1.00</span></div><div class="row2"><b>Extra Flavor Shot</b><span>$0.75</span></div><div class="row2"><b>Oat Milk</b><span>$0.75</span></div><div class="row2"><b>Honey</b><span>$0.75</span></div></div>
   <div class="bar">Drinks</div><div class="row2"><b>Bottled Water</b><span>$2.00</span></div>
+  <div class="punch">&#9749; Punch card: your 10th drink is FREE</div>
  </div>
 </div></section>
 
+<section id="photos"><div class="wrap"><div class="bar">The cart &amp; gear</div><div class="gal"><figure><img src="img/p1.jpg" alt="The cart" loading="lazy"><figcaption>The cart</figcaption></figure><figure><img src="img/p2.jpg" alt="Good Coffee Travels Fast" loading="lazy"><figcaption>Good Coffee Travels Fast</figcaption></figure><figure><img src="img/p3.jpg" alt="Logo concept (illustration)" loading="lazy"><figcaption>Logo concept (illustration)</figcaption></figure><figure><img src="img/p4.jpg" alt="Summit fridge" loading="lazy"><figcaption>Summit fridge</figcaption></figure><figure><img src="img/p5.jpg" alt="Nuova Simonelli Oscar espresso machine" loading="lazy"><figcaption>Nuova Simonelli Oscar espresso machine</figcaption></figure><figure><img src="img/p6.jpg" alt="Espresso grinder" loading="lazy"><figcaption>Espresso grinder</figcaption></figure><figure><img src="img/p7.jpg" alt="Water pump unit" loading="lazy"><figcaption>Water pump unit</figcaption></figure><figure><img src="img/p8.jpg" alt="3-compartment sink cart" loading="lazy"><figcaption>3-compartment sink cart</figcaption></figure></div></div></section>
+
+<section id="video"><div class="wrap"><div class="bar">Watch</div><video controls playsinline preload="none" poster="img/promo-poster.jpg"><source src="promo.mp4" type="video/mp4"></video></div></section>
+
+<section id="host" class="cater"><div class="wrap"><div class="bar">Host the Cart</div>
+ <p>Own a business in or near Fuquay-Varina? Bring fresh espresso to your customers and staff at no cost to you.</p>
+ <ul class="terms"><li>Your business gets 10% of sales</li><li>Free 2-hour trial first</li><li>No contract</li><li>We need about 100 sq ft on a commercial lot</li></ul>
+ <div class="btns"><a class="btn" href="mailto:rogueespressocart@mail.grokbot.com?subject=Host%20the%20Rogue%20Espresso%20Cart&body=Business%20name%3A%0AAddress%3A%0ABest%20days%2Ftimes%3A%0AContact%20phone%3A">Email to host us</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
+</div></section>
+
 <section class="cater"><div class="wrap">
- <div class="bar">Catering &amp; Events</div>
- <p>Want the cart at your office, party, or event? Send the date, location, and headcount.</p>
+ <div class="bar">Book us for events</div>
+ <p>Weddings, offices, parties and more. Send the date, location, and headcount.</p>
+ <div class="btns"><a class="btn" href="mailto:rogueespressocart@mail.grokbot.com?subject=Rogue%20Espresso%20Event%20Booking&body=Event%20type%20(wedding%2Foffice%2Fparty)%3A%0ADate%3A%0ALocation%3A%0AHeadcount%3A%0ATime%20window%3A">Email to book</a><a class="btn alt" href="tel:+18184780336">Call (818) 478-0336</a></div>
+ <p class="muted" style="margin-top:.8rem">Or contact Tracy and Shaun directly:</p>
  <div class="btns"><a class="btn" href="mailto:tracylk23@hotmail.com,millrite1shaun@yahoo.com?subject=Rogue%20Espresso%20Catering%20%2F%20Event%20Request&body=Date%3A%0ALocation%3A%0AHeadcount%3A%0ATime%20window%3A%0ANotes%3A">Request catering</a><a class="btn alt" href="tel:+18184780336">Tap to call Tracy</a></div>
 </div></section>
 
@@ -96,7 +108,7 @@ footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin
 <script>
 const el=document.getElementById("schedule");
 el.innerHTML = SCHEDULE.length ? SCHEDULE.map(([d,t,p,n])=>`<div class="card"><b>${d} · ${t}</b>${p}<div class="muted">${n}</div></div>`).join("")
- : '<p class="muted">Schedule coming soon. Call or email to find the cart.</p>';
+ : '<p class="muted" style="text-align:center">We\'re lining up our first spots now. <a href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Follow Rogue Espresso on Facebook</a> for locations, or call (818) 478-0336.</p>';
 document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
 </body>
