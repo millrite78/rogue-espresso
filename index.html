@@ -60,10 +60,12 @@ footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin
  <div class="caps">ESPRESSO</div>
  <div class="tag">Good Coffee Travels Fast</div>
  <p style="margin-top:.8rem;font-size:.9rem">Wooden espresso push cart · Fuquay-Varina, NC</p>
- <div class="btns"><a class="btn" href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Coming soon: follow us for locations</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
+ <div class="btns"><a class="btn" href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Follow us for other locations</a><a class="btn alt" href="tel:+18184780336">Call Tracy (818) 478-0336</a></div>
 </div></header>
 
-<section id="find"><div class="wrap"><div class="bar">Coming soon: follow us for locations</div><div id="schedule"></div></div></section>
+<section id="find"><div class="wrap"><div class="bar">Opening Day</div>
+<p style="text-align:center">Opening Day: Thursday, Nov 12, 2026, 9 AM&ndash;5 PM at Silver Dollar Coin Shop, 969 Judd Pkwy, Fuquay-Varina, NC 27526.</p>
+<div id="schedule"></div></div></section>
 
 <section id="menu"><div class="wrap cols">
  <div><div class="bar">Classics and more</div><div class="row h"><div></div><span>12oz</span><span>16oz</span></div><div class="row"><div><b>Brewed Coffee</b><small>freshly brewed drip coffee</small></div><span>$3.00</span><span>$3.50</span></div><div class="row"><div><b>Latte</b></div><span>$4.75</span><span>$5.75</span></div><div class="row"><div><b>Cappuccino</b><small>espresso • steamed milk foam</small></div><span>$4.75</span><span>$5.75</span></div><div class="row"><div><b>Americano</b><small>espresso • hot water</small></div><span>$3.75</span><span>$4.25</span></div><div class="row"><div><b>Caramel Macchiato</b><small>vanilla • caramel • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>White Chocolate Mocha</b><small>white chocolate • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Mocha</b><small>chocolate • espresso • steamed milk</small></div><span>$5.25</span><span>$6.25</span></div><div class="row"><div><b>Dirty Chai</b><small>chai • espresso • steamed milk</small></div><span>$5.50</span><span>$6.50</span></div><div class="row"><div><b>Iced Coffee</b><small>Syrup flavors: Vanilla • Caramel • Hazelnut • White Chocolate • Mocha • Brown Sugar Cinnamon • Toffee • Irish Cream • Coconut</small></div><span>$4.00</span><span>$4.75</span></div></div>
@@ -126,7 +128,7 @@ footer .thx{letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin
 <script>
 const el=document.getElementById("schedule");
 el.innerHTML = SCHEDULE.length ? SCHEDULE.map(([d,t,p,n])=>`<div class="card"><b>${d} · ${t}</b>${p}<div class="muted">${n}</div></div>`).join("")
- : '<p class="muted" style="text-align:center">We\'re lining up our first spots now. <a href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Follow Rogue Espresso on Facebook</a> for locations, or call (818) 478-0336.</p>';
+ : '<p class="muted" style="text-align:center;margin-top:.6rem"><a href="https://www.facebook.com/61593154828008" target="_blank" rel="noopener">Follow us for other locations</a>, or call (818) 478-0336.</p>';
 document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
 </body>
